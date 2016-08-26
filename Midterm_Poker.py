@@ -100,15 +100,10 @@ def straight(ranks):
     
 
 
-
-def main():
+if __name__ == '__main__':
     deck = PokerDeck()
     shuffle(deck)
     hand = []
     hand = deal_hand(deck) 
     ranks = []
-    for card in hand:
-        ranks.append(card[0])    
-        
-if__main__ == '__main__':
-    
+
