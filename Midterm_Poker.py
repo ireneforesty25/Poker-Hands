@@ -98,23 +98,17 @@ def straight(ranks):
         return False
     
     
-def flush():
-    
 
 
+
+def main():
+    deck = PokerDeck()
+    shuffle(deck)
+    hand = []
+    hand = deal_hand(deck) 
+    ranks = []
+    for card in hand:
+        ranks.append(card[0])    
         
-
-deck = PokerDeck()
-shuffle(deck)
-
-hand = []
-
-
-hand = deal_hand(deck) 
-
-ranks = []
-
-for card in hand:
-    ranks.append(card[0])
+if__main__ == '__main__':
     
-  
