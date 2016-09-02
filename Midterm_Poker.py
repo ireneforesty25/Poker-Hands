@@ -79,27 +79,21 @@ def straight(ranks):
     else:
         return False
     
-def straight(ranks):
-    
-    for i in range(len(ranks)):
-        if ranks[i] == "J":
-            ranks[i] == 11
-        elif ranks[i] == "Q":
-            ranks[i] == 12
-        elif ranks[i] == "K":
-            ranks[i] == 13
-        elif ranks[i] == "A":
-            ranks[i] == 14
-        else:
-            ranks[i] = int(ranks[i])
-    if(int(ranks[0]) - ranks[4] == -4):
+
+def flush(suits):
+    if mysuits.count == 5:
         return True
     else:
+        return False 
+    
+def straightflush(suits):
+    if flush(suits) and straight(ranks):
+        return True
+    else: 
         return False
     
     
-
-
+    
 if __name__ == '__main__':
     deck = PokerDeck()
     shuffle(deck)
