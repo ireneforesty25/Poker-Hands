@@ -17,23 +17,24 @@ def test_pairs():
 def test_three_of_a_kind():
     hand = [Card(rank='10', suit='♦'), Card(rank='K', suit='♦'), Card(rank='K', suit='♥'), Card(rank='K', suit='♠'),
              Card(rank='4', suit='♠')]    
-    assert three_of_a_kind(hand) == 3
+    assert three_of_a_kind(hand) == 1
     
 def test_four_of_a_kind():
     hand = [Card(rank='5', suit='♦'), Card(rank='5', suit='♦'), Card(rank='5', suit='♥'), Card(rank='5', suit='♠'),
              Card(rank='5', suit='2')]
-    assert four_of_a_kind(hand) == 4
+    assert four_of_a_kind(hand) == 1
     
 def test_five_of_a_kind():
     hand = [Card(rank='3', suit='♦'), Card(rank='3', suit='♦'), Card(rank='3', suit='♥'), Card(rank='3', suit='♠'),
              Card(rank='3', suit='♠')]
-    assert five_of_a_kind(hand) == 5
+    assert five_of_a_kind(hand) == 1
     
 def test_straight():
     hand = [Card(rank='A', suit='♦'), Card(rank='K', suit='♦'), Card(rank='Q', suit='♦'), Card(rank='J', suit='♦'), Card(rank='10', suit='♦')]
     assert straight(hand) == 1
     
     
-    
-
+def test_flush():
+    hand =  [Card(rank='A', suit='♦'), Card(rank='K', suit='♦'), Card(rank='Q', suit='♦'), Card(rank='J', suit='♦'), Card(rank='10', suit='♦')]
+    assert flush(hand) == 1
     
